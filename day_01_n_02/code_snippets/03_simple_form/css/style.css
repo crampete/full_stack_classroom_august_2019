@@ -1,0 +1,49 @@
+body {
+  min-height: 100vh;
+  background: url(../img/bg.jpg);
+  background-size: cover;
+  color: #051719;
+}
+
+#form-holder {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 400px;
+  width: 50%;
+  background-color: #a4cdd1;
+  margin-top: 10%;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+#form-holder label {
+  display: block;
+  margin: 5px 0;
+  font-family: "Karla", sans-serif;
+
+  text-transform: uppercase;
+}
+
+#form-holder input {
+  margin: 5px 0;
+  font-family: "Rubik", sans-serif;
+  width: 100%;
+  border: none;
+  border-radius: 2px;
+}
+
+#form-buttons {
+  margin-top: 25px;
+  text-align: center;
+}
+
+#form-buttons button {
+  background-color: #3d9ba6;
+  border: none;
+  width: 50%;
+  height: 24px;
+  font-family: "Karla", sans-serif;
+
+  text-transform: uppercase;
+  border-radius: 5px;
+}
