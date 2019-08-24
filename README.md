@@ -8,12 +8,12 @@ Homework, resources, code snippets, live projects and learning hacks can be foun
 
 - Day 1 & Day 2
 
-  - [Overview](#day-1---2-overview)
+  - [Overview](#day-1--day-2-overview)
   - [Homework](day_01_n_02/homework.md)
   - [Code](https://github.com/crampete/full_stack_classroom_august_2019/tree/master/day_01_n_02/code_snippets)
 
 - Day 3 & Day 4
-  - [Overview](#day-3---4-overview)
+  - [Overview](#day-3--day-4-overview)
   - [Homework](day_03_n_04/homework.md)
   - [Code](https://github.com/crampete/full_stack_classroom_august_2019/tree/master/day_03_n_04/code_snippets)
 
