@@ -7,9 +7,15 @@ Homework, resources, code snippets, live projects and learning hacks can be foun
 ## Index
 
 - Day 1 & Day 2
+
   - [Overview](#day-1---2-overview)
   - [Homework](day_01_n_02/homework.md)
   - [Code](https://github.com/crampete/full_stack_classroom_august_2019/tree/master/day_01_n_02/code_snippets)
+
+- Day 3 & Day 4
+  - [Overview](#day-3---4-overview)
+  - [Homework](day_03_n_04/homework.md)
+  - [Code](https://github.com/crampete/full_stack_classroom_august_2019/tree/master/day_03_n_04/code_snippets)
 
 ### Day 1 & Day 2 Overview
 
@@ -37,3 +43,13 @@ Homework, resources, code snippets, live projects and learning hacks can be foun
 - Made 2 simple pages. Broke them into parts (boxes, individual tags) and built them in class.
   - [Page 1](https://github.com/crampete/full_stack_classroom_august_2019/tree/master/day_01_n_02/code_snippets/01_simple_text)
   - [Page 2](https://github.com/crampete/full_stack_classroom_august_2019/tree/master/day_01_n_02/code_snippets/02_random_quote)
+
+### Day 3 & Day 4 Overview
+
+- Refresher display inline and block elements using inspect elements.
+- Anchor tags and how to open in new tabs.
+- unordered list tags.
+- Centering block elements and centering inline elements.
+- Span tags. Use cases and how they differ from paragraph tags.
+- Why use a `reset.css` and using an existing `reset.css` file.
+- What is mobile responsiveness?
