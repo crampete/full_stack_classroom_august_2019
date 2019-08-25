@@ -53,3 +53,11 @@ Homework, resources, code snippets, live projects and learning hacks can be foun
 - Span tags. Use cases and how they differ from paragraph tags.
 - Why use a `reset.css` and using an existing `reset.css` file.
 - What is mobile responsiveness?
+- Mobile first approach.
+- CSS breakpoints for media queries. Why those breakpoints?
+- Linking to an ID in a HTML page.
+- Semantic HTML
+- Pseudo-Selectors in CSS.
+- `block`, `inline` and `inline-block`.
+- Different CSS for different width devices.
+- Linking to different HTML pages using anchor tags.
