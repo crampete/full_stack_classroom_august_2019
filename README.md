@@ -57,7 +57,7 @@ Homework, resources, code snippets, live projects and learning hacks can be foun
 - CSS breakpoints for media queries. Why those breakpoints?
 - Linking to an ID in a HTML page.
 - Semantic HTML
-- Pseudo-Selectors in CSS.
+- Pseudo-Selectors (just hover) in CSS.
 - `block`, `inline` and `inline-block`.
 - Different CSS for different width devices.
 - Linking to different HTML pages using anchor tags.
