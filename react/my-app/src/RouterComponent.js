@@ -4,6 +4,8 @@ import Student from "./Student"
 import Counter from "./Counter"
 import LifeCycleMethod from './LifeCycleMethod';
 import Rest from './Rest';
+import ReactForm from './ReactForm';
+import Weather from './Weather';
 
 function RouterComponent(){
     return(
@@ -11,7 +13,11 @@ function RouterComponent(){
                 <Link to="/student"> Student </Link><br></br>
                 <Link to="/counter"> Counter </Link>
 
-                <Route to="/rest" component={Rest}></Route>
+                <Route to="/weather" component={Weather}></Route>
+
+                <Route to="/reactform" component={ReactForm}></Route>
+
+                
                 <Route path="/life" component={LifeCycleMethod}></Route>
                 <Route path="/" exact component={Counter}></Route>
                 <Route path="/student" component={Student}></Route>
