@@ -4,39 +4,32 @@ class Weather extends React.Component{
     constructor(){
         super()
         this.state = {
-            "latitude" : "",
-            "longitude" : ""
+          "place" : "",
+          "temperature" : 0
         }
     }
 
-    onLatChange = (event) =>{
+    onPlaceChange = (event) =>{
         this.setState({
-            "latitude" : event.target.value
-        })
-    }
-
-    onLongChange = (event) =>{
-        this.setState({
-            "longitude" : event.target.value
+            "place" : event.target.value
         })
     }
 
     handleClick = () => {
-        let url = "https://api.darksky.net/forecast/5299117f1421deae5378b4f3207da78c/"
-        url = url + this.state.latitude + "," + this.state.longitude
-        axios.get(url)
+        let url = "http://localhost:8000/temperature"
+        axios.post(url, {"place" : this.state.place})
         .then((response)=>{
-            console.log(response.data)
+            console.log(response.data.temperature)
+            this.setState({"temperature" : response.data.temperature})
         })
     }
     render(){
         return(
         <div>
-            <label>latitude</label>
-            <input onChange={this.onLatChange} type="text"></input>
+            <h1>Temperature of {this.state.place} is {this.state.temperature}</h1>
+            <label>Place</label>
+            <input onChange={this.onPlaceChange} type="text"></input>
 
-            <label>longitude</label>
-            <input onChange={this.onLongChange} type="text"></input>
             <button onClick={this.handleClick}>Submit</button>
         </div>
         )
