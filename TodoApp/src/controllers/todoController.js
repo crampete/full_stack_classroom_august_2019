@@ -1,11 +1,13 @@
 let express = require('express')
 let router = express.Router();
 let Todo = require("../models/Todo")
+let auth = require("../middlewares/auth")
 
-router.post("/",(req,res)=>{
-    let {title , description , creator} = req.body
+router.post("/",auth,(req,res)=>{
+    let {title , description} = req.body
     let done = false
     let createDateTime = new Date()
+    let creator = req.user._id;
 
     let todo = new Todo({
         title ,description, creator, done, createDateTime
@@ -25,8 +27,10 @@ router.put("/", (req,res)=>{
     .catch((error)=> res.status(400).send(error))
 })
 
-router.get("/", (req,res)=>{
-    Todo.find()
+router.get("/", auth,(req,res)=>{
+    let userId = req.user._id
+
+    Todo.find({ creator : userId})
     .then((todos)=>{res.send(todos)})
     .catch((error)=> res.status(400).send(error))
 })
