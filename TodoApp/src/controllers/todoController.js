@@ -35,4 +35,18 @@ router.get("/", auth,(req,res)=>{
     .catch((error)=> res.status(400).send(error))
 })
 
+router.put("/done",auth, (req,res)=>{
+    //Implement this
+    // Get the todo id from request
+    // update the done=true for that todo record in the db
+    // send success or error response accordingly.
+})
+
+router.delete("/", auth,(req,res)=>{
+    // Implement this function
+    // get the todo id from request
+    // delete the record from the db with that id
+    // send success or error response accordingly.
+})
+
 module.exports = router;

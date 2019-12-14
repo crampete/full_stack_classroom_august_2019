@@ -2,11 +2,12 @@ import React from 'react'
 import axios from "axios"
 
 class Login extends React.Component{
-    constructor(){
+        constructor(){
         super()
         this.state={
             email  : "",
-            password : ""
+            password : "",
+            loginFailed :  false
         }
     }
     onEmailChange = (event) =>{
@@ -26,26 +27,60 @@ class Login extends React.Component{
         }).then((res)=>{
             console.log(res.data)
             localStorage.setItem("token", res.data.token); 
-        }).catch((err)=>console.log(err))
+            this.props.updateEmail(this.state.email)
+           this.props.history.push("/todo")
+           
+           
+
+        }).catch((err)=>{
+            this.setState({loginFailed : true})
+            console.log(err)
+        })
     }
 
     render(){
         return(
         <div>
-            <h3>Login</h3>
-            <div>
-
-                 <div className="form-group">
-                    <label>Email </label>
-                    <input className="form-control" type="text" onChange={this.onEmailChange}></input>
+            <div className="row">
+                <div className="col-md-4 offset-md-4 ">
+                    <h4>Login</h4>
                 </div>
-
-                <div className="form-group">
-                <label>Password </label>
-                <input className="form-control" type="password" onChange={this.onPasswordChange}></input>
-                </div>
-                <button className="btn btn-outline-primary" onClick={this.onSubmit}>Submit</button>
             </div>
+
+            <div className="row">
+                {   this.state.loginFailed &&
+                    <div className="col-md-4 offset-md-4 ">
+                        <div className="alert alert-danger" role="alert">
+                        Invalid login credentials
+                        </div>
+                    </div>
+                }   
+
+            </div>
+
+
+            <div className="row">
+                              
+                <div className="col-md-4 offset-md-4 col-sm-12">
+                    <div>
+                        <div className="form-group">
+                            <label>Email </label>
+                            <input className="form-control" type="text" onChange={this.onEmailChange}></input>
+                        </div>
+
+                        <div className="form-group">
+                        <label>Password </label>
+                        <input className="form-control" type="password" onChange={this.onPasswordChange}></input>
+                        </div>
+                        <button className="btn btn-outline-primary" onClick={this.onSubmit}>Submit</button>
+                    </div>
+                </div>
+            </div>
+
+
+
+           
+           
         </div>
         )
     }

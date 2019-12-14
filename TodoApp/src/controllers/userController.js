@@ -53,6 +53,10 @@ router.post("/register", (req,res)=>{
 })
 
 
+router.get("/me", auth, (req,res)=>{
+    res.send(req.user)
+})
+
 router.post("/logout",auth,(req,res)=>{
     let user = req.user
     let token = req.token

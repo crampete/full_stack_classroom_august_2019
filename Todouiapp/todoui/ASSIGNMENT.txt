@@ -1,0 +1,16 @@
+Final Assignment
+
+Implement "done" api for a todo
+1. On each todo card, there is button called "Mark as Done"
+    onClick this button, call an PUT /todo/done api with sending todo id in the body
+2. Implement PUT /done api in backend.
+    get the id from the request, update the db with done=true for the todo record with that id
+    send sucess/failure response
+3. Front end , if it gets success response, reloads the front end with calling GET /todo (Already implemented as getTodos()
+4. Front end, if a todo has "done=true" then , the button "Mark as Done" should not be displayed and all the text in the card should be light grey in color.
+
+Implement "delete" api 
+1. UI part is already done, it will call a api DELETE /todo when "Delete" button is clicked
+2. Implement DELETE /todo in backend . it needs to read todo id from the request and delete that 
+todo record form the db
+ 
